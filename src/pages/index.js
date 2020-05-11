@@ -1,166 +1,80 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import MySwiper from "../components/swiper/swiper"
-import SampleForm from "../components/form/form"
-import { LazyLoadImage } from "react-lazy-load-image-component"
-import "react-lazy-load-image-component/src/effects/blur.css"
+import React from "react";
+import { graphql } from "gatsby";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import Hero from "../components/swiper/heroswiper";
+// import MySwiper from "../components/swiper/swiper";
+// import SampleForm from "../components/form/form";
+// import { LazyLoadImage } from "react-lazy-load-image-component";
+// import "react-lazy-load-image-component/src/effects/blur.css";
+import herobg1 from "../images/hero-bg-1.jpg";
+import herobg2 from "../images/hero-bg-2.jpg";
+import herobg3 from "../images/hero-bg-3.jpg";
 
 class IndexPage extends React.Component {
   render() {
-    const siteTitle = this.props.data.site.siteMetadata.title
-    const siteDescription = this.props.data.site.siteMetadata.description
+    const siteTitle = this.props.data.site.siteMetadata.title;
+    const siteDescription = this.props.data.site.siteMetadata.description;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={siteTitle} description={siteDescription} />
-        <div>
-          <p>This is the homepage</p>
-          <Link to="/blog">Go to Blog</Link>
-          <br />
-          <br />
-          <h1>Sample Swiper</h1>
-          <br />
-          <MySwiper slidesperview={3}>
-            <div>
-              <LazyLoadImage
-                effect="blur"
-                className="img-fluid"
-                src="https://source.unsplash.com/collection/145698/400x400"
-                alt=""
-              />
-            </div>
-            <div>
-              <LazyLoadImage
-                effect="blur"
-                className="img-fluid"
-                src="https://source.unsplash.com/collection/2203755/400x400"
-                alt=""
-              />
-            </div>
-            <div>
-              <LazyLoadImage
-                effect="blur"
-                className="img-fluid"
-                src="https://source.unsplash.com/collection/362271/400x400"
-                alt=""
-              />
-            </div>
-            <div>
-              <LazyLoadImage
-                effect="blur"
-                className="img-fluid"
-                src="https://source.unsplash.com/collection/3657445/400x400"
-                alt=""
-              />
-            </div>
-            <div>
-              <LazyLoadImage
-                effect="blur"
-                className="img-fluid"
-                src="https://source.unsplash.com/collection/385548/400x400"
-                alt=""
-              />
-            </div>
-            <div>
-              <LazyLoadImage
-                effect="blur"
-                className="img-fluid"
-                src="https://source.unsplash.com/collection/325867/400x400"
-                alt=""
-              />
-            </div>
-            <div>
-              <LazyLoadImage
-                effect="blur"
-                className="img-fluid"
-                src="https://source.unsplash.com/collection/1118905/400x400"
-                alt=""
-              />
-            </div>
-            <div>
-              <LazyLoadImage
-                effect="blur"
-                className="img-fluid"
-                src="https://source.unsplash.com/collection/2270935/400x400"
-                alt=""
-              />
-            </div>
-            <div>
-              <LazyLoadImage
-                effect="blur"
-                className="img-fluid"
-                src="https://source.unsplash.com/collection/1252081/400x400"
-                alt=""
-              />
-            </div>
-            <div>
-              <LazyLoadImage
-                effect="blur"
-                className="img-fluid"
-                src="https://source.unsplash.com/collection/2411320/400x400"
-                alt=""
-              />
-            </div>
-          </MySwiper>
-          <br />
-          <br />
-          <h1>Sample Form</h1>
-          <br />
-          <SampleForm
-            form_name="Newsletter Form"
-            form_id="5bcd42f86b63453b251972bc"
-            form_classname="form-newsletter"
-          >
-            <div className="form-row">
-              <div className="col-12 mb-3">
-                <div className="form-group">
-                  <input
-                    className="form-control"
-                    type="email"
-                    name="Email Address"
-                    id="email_address"
-                  />
-                  <label htmlFor="email_address">
-                    Enter Your Email Address
-                  </label>
-                </div>
-                <small className="text-dark form-text mt-2">
-                  We will never share your email with anyone else.
-                </small>
+        <div id="hero" className="hero-section bg-light">
+          <div className="container-fluid p-0">
+            <Hero>
+              <div
+                style={{
+                  backgroundImage: `url(${herobg1})`,
+                  backgroundPosition: `center`,
+                  backgroundSize: `cover`,
+                }}
+              >
+                <p className="d-none" />
               </div>
-              <div className="col-12 mb-3">
-                <div className="form-group">
-                  <input
-                    className="form-control"
-                    type="text"
-                    name="Name"
-                    id="full_name"
-                  />
-                  <label htmlFor="full_name">Enter Your Name</label>
-                </div>
+              <div
+                style={{
+                  backgroundImage: `url(${herobg2})`,
+                  backgroundPosition: `center`,
+                  backgroundSize: `cover`,
+                }}
+              >
+                <p className="d-none" />
               </div>
-              <div className="col-12">
-                <div className="webriq-recaptcha" />
+              <div
+                style={{
+                  backgroundImage: `url(${herobg3})`,
+                  backgroundPosition: `center`,
+                  backgroundSize: `cover`,
+                }}
+              >
+                <p className="d-none" />
               </div>
-
-              <div className="col-12">
-                <div className="form-group">
-                  <button className="btn btn-primary hvr-shadow" type="submit">
-                    Submit
-                  </button>
+            </Hero>
+            <div className="  hero-content">
+              <div className="row">
+                <div className="col-md-7 mx-auto my-0">
+                  <div className="text-center">
+                    <h1 className="herotitle text-white">
+                      Lorem Ipsum is simply dummy text
+                    </h1>
+                    <p className="herop mb-6 hero-sub-title text-white p-4">
+                      Lorem Ipsum has been the industry's standard dummy text
+                      ever since the 1500s, when an unknown printer took a
+                      galley of type and scrambled it to make a type specimen
+                      book.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </SampleForm>
+          </div>
         </div>
       </Layout>
-    )
+    );
   }
 }
 
-export default IndexPage
+export default IndexPage;
 
 export const indexPageQuery = graphql`
   query indexPageQuery {
@@ -172,4 +86,4 @@ export const indexPageQuery = graphql`
       }
     }
   }
-`
+`;

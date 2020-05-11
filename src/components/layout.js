@@ -1,11 +1,11 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-import { Container } from "reactstrap"
-import Header from "./header/header"
-import "./layout.css"
-import "bootstrap/dist/css/bootstrap.css"
-import "./font-face.css"
+import React from "react";
+import PropTypes from "prop-types";
+import { useStaticQuery, graphql } from "gatsby";
+import Header from "./header/header";
+import Footer from "./footer/footer";
+import "./layout.css";
+import "bootstrap/dist/css/bootstrap.css";
+import "./font-face.css";
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -16,26 +16,19 @@ const Layout = ({ children }) => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <Container>
-        <main>{children}</main>
-        <footer style={{ textAlign: "center" }}>
-          <span>Webriq -> Gatsby + netlifyCMS Template</span> ©{" "}
-          {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </Container>
+      <main>{children}</main>
+      <Footer />
     </>
-  )
-}
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;
