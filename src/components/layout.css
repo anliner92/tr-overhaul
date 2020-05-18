@@ -2,6 +2,20 @@ html {
   overflow-x: hidden;
 }
 
+body,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Saira Stencil One", sans-serif !important;
+}
+
+p {
+  font-weight: bold !important;
+  font-size: 16px;
+}
+
 /* BLOG AREA */
 
 .img-area {
@@ -135,6 +149,61 @@ footer span {
   width: 100%;
 }
 
+/*About*/
+
+#about-us {
+  background: #f2f2f2;
+}
+
+#about-us h2 {
+  text-transform: uppercase;
+}
+
+#about-us .col-md-7 .tr-overhaul-about .about-us-img {
+  width: 28%;
+  background: #469fef;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+/*Services*/
+
+#Services {
+  padding: 70px 0;
+}
+
+#Services .col-md-4 {
+  z-index: 2;
+}
+
+#Services .services-wrap {
+  width: 100%;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 10px 27px -9px rgba(0, 0, 0, 0.11);
+  -moz-box-shadow: 0px 10px 27px -9px rgba(0, 0, 0, 0.11);
+  box-shadow: 0px 10px 27px -9px rgba(0, 0, 0, 0.11);
+}
+
+.btn.btn-primary.btn-outline-primary {
+  border: 1px solid #1089ff;
+  background: transparent;
+  color: #1089ff;
+}
+
+.btn.btn-primary.btn-outline-primary:hover {
+  border: 1px solid transparent;
+  background: #1089ff;
+  color: #fff;
+}
+
+@media (min-width: 992px) {
+  #Services .container {
+    margin-top: -200px;
+  }
+}
+
 /*Footer*/
 
 #top-footer {
@@ -167,7 +236,6 @@ footer span {
 }
 
 .footer-title {
-  font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
   font-size: 18px;

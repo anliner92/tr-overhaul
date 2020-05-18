@@ -41,6 +41,12 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Saira Stencil One\:100,200,300,400,500,700`],
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/markdown/posts`,
@@ -56,4 +62,4 @@ module.exports = {
     },
     `gatsby-transformer-remark`,
   ],
-}
+};

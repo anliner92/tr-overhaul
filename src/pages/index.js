@@ -10,6 +10,8 @@ import Hero from "../components/swiper/heroswiper";
 import herobg1 from "../images/hero-bg-1.jpg";
 import herobg2 from "../images/hero-bg-2.jpg";
 import herobg3 from "../images/hero-bg-3.jpg";
+import AboutUs from "../components/homesection/about-us.js";
+import Services from "../components/homesection/services.js";
 
 class IndexPage extends React.Component {
   render() {
@@ -69,6 +71,8 @@ class IndexPage extends React.Component {
             </div>
           </div>
         </div>
+        <Services />
+        <AboutUs />
       </Layout>
     );
   }
