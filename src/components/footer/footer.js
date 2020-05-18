@@ -53,7 +53,7 @@ const footer = (props) => {
                     </li>
 
                     <li>
-                      <Link to="/contact">Services</Link>
+                      <Link to="/">Services</Link>
                     </li>
                     <li>
                       <Link to="/">Contact</Link>
