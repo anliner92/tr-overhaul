@@ -16,13 +16,13 @@ export default () => (
 				<Link to="/">Home</Link>
 			</Nav.Item>
 			<Nav.Item>
-				<Link to="/blog">About us</Link>
+				<Link to="/">About us</Link>
 			</Nav.Item>
 			<Nav.Item>
-				<Link to="/blog">Services</Link>
+				<Link to="/">Services</Link>
 			</Nav.Item>
 			<Nav.Item>
-				<Link to="/contact">Contact</Link>
+				<Link to="/">Contact</Link>
 			</Nav.Item>
 			{/*<Dropdown as={NavItem}>
 				<Dropdown.Toggle as={Nav.Link}>Dropdown</Dropdown.Toggle>
