@@ -149,6 +149,19 @@ footer span {
   width: 100%;
 }
 
+.btn-use {
+  padding: 5px 20px;
+  color: #fff;
+  background: #1a7fcd;
+  border: 1px solid #1089ff;
+  border-radius: 0.25rem;
+}
+
+.btn-use:hover {
+  color: #1a7fcd;
+  background: #fff;
+}
+
 /*About*/
 
 #about-us {
